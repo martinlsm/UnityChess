@@ -19,18 +19,6 @@ public class PiecePrefab : MonoBehaviour
     public Sprite blackQueenSprite;
     public Sprite blackKingSprite;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Init(Piece piece) {
         if (piece.color == PieceColor.White) {
             switch (piece.type) {

@@ -12,6 +12,11 @@ public enum PieceColor {
     Black,
 }
 
+public class Constants {
+    public const int BOARD_WIDTH = 8;
+    public const int BOARD_HEIGHT = 8;
+}
+
 public class Piece {
     public PieceType type { get; }
     public PieceColor color { get; }
