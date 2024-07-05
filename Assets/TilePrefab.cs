@@ -5,14 +5,16 @@ using UnityEngine;
 public class TilePrefab : MonoBehaviour
 {
     public Color whiteCol, blackCol;
-    public PawnPrefab pawnPrefab;
+    public PiecePrefab piecePrefab;
 
-
-    public void Init(bool isOffset) {
-        GetComponent<SpriteRenderer>().color = isOffset ? blackCol : whiteCol;
+    public void Init(bool isWhite) {
+        GetComponent<SpriteRenderer>().color = isWhite ? whiteCol : blackCol;
     }
 
     public void PlacePiece(Piece piece) {
-        Instantiate(pawnPrefab, GetComponent<Transform>().transform.position, Quaternion.identity);
+        var pos = GetComponent<Transform>().transform.position;
+        pos.z -= 1;
+        var p = Instantiate(piecePrefab, pos, Quaternion.identity);
+        p.Init(piece);
     }
 }

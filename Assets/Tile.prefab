@@ -97,6 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a59f7bff1b079c9ad9d6745d70770c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whiteCol: {r: 0.40706518, g: 0.6474056, b: 0.36569256, a: 1}
-  blackCol: {r: 0.021701999, g: 0.06367922, b: 0.022275625, a: 1}
-  pawnPrefab: {fileID: 1499880735340098316, guid: e551190ec1dc1448b9eb8787bdfa5d2c, type: 3}
+  whiteCol: {r: 0.7915649, g: 0.860849, b: 0.7816672, a: 1}
+  blackCol: {r: 0.31351936, g: 0.5259434, b: 0.2710345, a: 1}
+  piecePrefab: {fileID: -5638964220180841085, guid: e551190ec1dc1448b9eb8787bdfa5d2c, type: 3}

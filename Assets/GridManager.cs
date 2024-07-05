@@ -12,7 +12,6 @@ public class GridManager : MonoBehaviour
  
     // Start is called before the first frame update
     void Start() {
-
         tiles = new TilePrefab[width, height];
         GenerateGrid();
         PlacePieces();
@@ -33,8 +32,8 @@ public class GridManager : MonoBehaviour
                 char file = (char)((int)'A' + x);
                 spawnedTile.name = $"{file}{y + 1}";
 
-                bool isOffset = (x % 2 == 0 && y % 2 != 0) || (x % 2 != 0 && y % 2 == 0);
-                spawnedTile.Init(isOffset);
+                bool isWhite = (x % 2 == 0 && y % 2 != 0) || (x % 2 != 0 && y % 2 == 0);
+                spawnedTile.Init(isWhite);
 
                 tiles[x, y] = spawnedTile;
             }
@@ -47,5 +46,31 @@ public class GridManager : MonoBehaviour
             Piece piece = new Piece(PieceType.Pawn, PieceColor.White);
             tiles[i, 1].PlacePiece(piece);
         }
+
+        // White pieces
+        tiles[0, 0].PlacePiece(new Piece(PieceType.Rook, PieceColor.White));
+        tiles[1, 0].PlacePiece(new Piece(PieceType.Knight, PieceColor.White));
+        tiles[2, 0].PlacePiece(new Piece(PieceType.Bishop, PieceColor.White));
+        tiles[3, 0].PlacePiece(new Piece(PieceType.Queen, PieceColor.White));
+        tiles[4, 0].PlacePiece(new Piece(PieceType.King, PieceColor.White));
+        tiles[5, 0].PlacePiece(new Piece(PieceType.Bishop, PieceColor.White));
+        tiles[6, 0].PlacePiece(new Piece(PieceType.Knight, PieceColor.White));
+        tiles[7, 0].PlacePiece(new Piece(PieceType.Rook, PieceColor.White));
+
+        // Black pawns
+        for (int i = 0; i < width; i++) {
+            Piece piece = new Piece(PieceType.Pawn, PieceColor.Black);
+            tiles[i, 6].PlacePiece(piece);
+        }
+
+        // Black pieces
+        tiles[0, 7].PlacePiece(new Piece(PieceType.Rook, PieceColor.Black));
+        tiles[1, 7].PlacePiece(new Piece(PieceType.Knight, PieceColor.Black));
+        tiles[2, 7].PlacePiece(new Piece(PieceType.Bishop, PieceColor.Black));
+        tiles[3, 7].PlacePiece(new Piece(PieceType.Queen, PieceColor.Black));
+        tiles[4, 7].PlacePiece(new Piece(PieceType.King, PieceColor.Black));
+        tiles[5, 7].PlacePiece(new Piece(PieceType.Bishop, PieceColor.Black));
+        tiles[6, 7].PlacePiece(new Piece(PieceType.Knight, PieceColor.Black));
+        tiles[7, 7].PlacePiece(new Piece(PieceType.Rook, PieceColor.Black));
     }
 }

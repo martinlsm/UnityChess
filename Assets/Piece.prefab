@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6646464028853157817}
   - component: {fileID: 735531563969748231}
-  - component: {fileID: 1499880735340098316}
+  - component: {fileID: -5638964220180841085}
   m_Layer: 0
-  m_Name: Pawn
+  m_Name: Piece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1499880735340098316
+--- !u!114 &-5638964220180841085
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,6 +94,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 6229121732272158247}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d5edc7df78058728b701937383f3f90, type: 3}
+  m_Script: {fileID: 11500000, guid: 778758ef6860028abaafa0e8e83c0c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whitePawnSprite: {fileID: 21300000, guid: a68e10c82286d7000a7505c8fb75ad67, type: 3}
+  whiteRookSprite: {fileID: 21300000, guid: ccd86cc9a9919b5e0854fffa5a1e09f5, type: 3}
+  whiteKnightSprite: {fileID: 21300000, guid: e6f89a4e9a92db5639605942471cb742, type: 3}
+  whiteBishopSprite: {fileID: 21300000, guid: a38afdc5c4a930f48b773a65eae13150, type: 3}
+  whiteQueenSprite: {fileID: 21300000, guid: 6b3ab15ff49fcce11a44b2014fe88e4b, type: 3}
+  whiteKingSprite: {fileID: 21300000, guid: e48fc24ad77cea7f7827ffab85de4872, type: 3}
+  blackPawnSprite: {fileID: 21300000, guid: 0a1fe42090ac59d0b8168f9dc01f6f5f, type: 3}
+  blackRookSprite: {fileID: 21300000, guid: a4ecdddfb1e2fbae98511119200936f4, type: 3}
+  blackKnightSprite: {fileID: 21300000, guid: 0d44d359f079c6b63ab00e4d1112a2d7, type: 3}
+  blackBishopSprite: {fileID: 21300000, guid: bc4eaeb5a0d760aabbd9ccefedc68e59, type: 3}
+  blackQueenSprite: {fileID: 21300000, guid: 3edd040806a862326b348c9321ba4fb7, type: 3}
+  blackKingSprite: {fileID: 21300000, guid: 41e0829961edf5003aab4ea9dfbbcbc4, type: 3}
