@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+
 
 public class PiecePrefab : MonoBehaviour
 {
@@ -18,6 +20,8 @@ public class PiecePrefab : MonoBehaviour
     public Sprite blackBishopSprite;
     public Sprite blackQueenSprite;
     public Sprite blackKingSprite;
+
+    private bool isDragged = false;
 
     public void Init(Piece piece) {
         if (piece.color == PieceColor.White) {
@@ -63,5 +67,24 @@ public class PiecePrefab : MonoBehaviour
                     break;
             }
         }
+    }
+
+    void OnMouseDrag() {
+        float zVal = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
+     	Vector3 dest = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, zVal ));
+        transform.position = new Vector3( dest.x, dest.y, dest.z );
+        isDragged = true;
+    }
+
+    public void OnMouseUp() {
+        if (isDragged) {
+            var currPos = transform.position;
+            transform.position = new Vector3(round(currPos.x), round(currPos.y), currPos.z);
+        }
+        isDragged = false;
+    }
+
+    static int round(double d) {
+        return (int)(d + 0.5);
     }
 }
